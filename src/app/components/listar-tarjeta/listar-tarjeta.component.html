@@ -1,0 +1,20 @@
+<div class="card">
+    <div class="card-body">
+        <h5 class="titulo text-center">Listar Tarjetas</h5>
+
+      
+        <table class="table table-hover">
+    
+            <tbody>
+                <tr *ngFor="let tarjeta of arrayTarjetas">
+                    <td> {{tarjeta.titular}}</td>
+                    <td>{{tarjeta.numeroTarjeta}} </td>
+                    <td>{{tarjeta.fechaExpiracion}}</td>
+                    <td ><i (click)="editarTarjeta(tarjeta)" class="fa-solid fa-pen-to-square"></i></td>
+                    <td><i (click)="eliminarID(tarjeta.id)" class="fa-solid fa-trash-can"></i></td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</div>
